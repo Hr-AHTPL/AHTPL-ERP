@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  background-image: url("orsrc45477.jpg");
+}
+
+
+.sidebar {
+  width: 220px;
+  background: #9227e3;
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  padding: 20px;
+  
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: #dfe6f1;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #8d17e6;
+}
+
+.login-form{
+    border: 5px solid rgb(164, 69, 196);
+    border-style: hidden;
+    margin-left: 30%;
+    padding: 10px 20px;
+
+}
+
+.login-form h2{
+  text-align: absolute;
+  margin-left: 30%;
+  color: #8d17e6;
+  padding: 10px;
+}
+
+.login {
+    border-radius: 5px;
+    text-align: center;
+    color: #180b22;
+    padding: auto;
+}
+.login-form button{
+    margin-left: 50%;
+    margin-top: 10px;;
+    padding: 10px 12px;
+    border-radius: 5px;
+    position: center;
+    color: #fff;
+    background: #9227e3;
+}
+.login-form a{
+  color: #9227e3;
+  margin-right: auto;
+  margin-left: 110px ;
+}
+
+.login input{
+  margin-top: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.login-form button:hover{
+     cursor: pointer;
+    background-color: #8d17e6;
+
+
+}

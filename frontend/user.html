@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+
+      <aside class="sidebar">
+    <h2>ManufactureERP</h2>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-chart-simple"></i> Dashboard</a></li>
+      <li><a href="manufacturing.html"><i class="fa-solid fa-industry"></i> Manufacturing</a></li>
+      <li><a href="inventory.html"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a></li>
+      <li><a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+      <li><a href="reports.html"><i class="fa-solid fa-file-lines"></i> Reports</a></li>
+      <li><a href="user.html"><i class="fa-solid fa-users"></i> Users</a></li>
+      <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+    </ul>
+  </aside>
+    <div class="login-form">
+        <h2>Enter Credentials</h2>
+        <div>
+            <form class="login">
+                <label for="uname"><br>Username</label>
+                <input type="text" placeholder="Enter Username" required>
+                <label for="pass"><br>Password</label>
+                <input type="password" placeholder="Enter Password" name="passwaord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+       minlength="8" maxlength="20"required>
+            </form>
+            <button type="submit" >Submit</button>
+        </div>
+
+        <a href>Forgot Password</a>
+    </div>
+</body>
+</html>
