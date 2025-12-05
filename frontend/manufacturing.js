@@ -932,6 +932,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const workOrder = elements.workOrderInput.value.trim();
     const machineName = elements.machineNameInput.value.trim();
+    const requirementNo = document.getElementById('requirementNo')?.value.trim() || '';
     const machine = elements.machineSelect.value;
     
     // Handle component - custom or selected
@@ -977,7 +978,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     state.draftProducts.push({ 
       workOrder, 
-      machineName, 
+      machineName,
+      requirementNo, 
       machine, 
       component, 
       material, 
@@ -1038,6 +1040,7 @@ document.addEventListener('DOMContentLoaded', () => {
       productionItemsToSend.push({
         workOrder: draft.workOrder,
         machineName: draft.machineName,
+        requirementNo: draft.requirementNo || '',
         department: draft.machine,
         component: draft.component,
         material: draft.material,
