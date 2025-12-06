@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
   const token = localStorage.getItem('authToken');
   if (token) {
     // User is already logged in, redirect to dashboard
-    window.location.href = 'index.html';
+    window.location.href = '/index.html';
   }
 
   // Check for "Remember Me" saved credentials
@@ -95,7 +95,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
       alert('✅ Login successful! Redirecting to dashboard...');
       
       // Redirect to dashboard
-      window.location.href = 'index.html';
+      window.location.href = '/index.html';
       
     } else {
       // Show error message

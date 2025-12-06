@@ -8,6 +8,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="inventory.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+  // Check authentication
+  window.addEventListener('DOMContentLoaded', function() {
+    const token = localStorage.getItem('authToken');
+    if (!token) {
+      window.location.href = 'auth.html';
+    }
+  });
+</script>
 </head>
 <body>
   <aside class="sidebar">
@@ -18,6 +27,19 @@
       <li><a href="inventory.html"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a></li>
       <li><a href="reports.html"><i class="fa-solid fa-file-lines"></i> Reports</a></li>
     </ul>
+    <!-- ADD BEFORE </aside> -->
+  <div class="sidebar-footer">
+    <div class="user-info">
+      <i class="fas fa-user-circle"></i>
+      <div class="user-details">
+        <span id="sidebarUsername">Admin</span>
+        <small id="sidebarRole">Administrator</small>
+      </div>
+    </div>
+    <button onclick="logout()" class="logout-btn">
+      <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </button>
+  </div>
   </aside>
 
   <main class="main">
@@ -330,5 +352,29 @@
   </main>
 
   <script src="inventory.js"></script>
+  <script>
+// Display logged-in user info
+window.addEventListener('DOMContentLoaded', function() {
+  const username = localStorage.getItem('username');
+  const role = localStorage.getItem('userRole');
+  
+  if (username) {
+    const usernameEl = document.getElementById('sidebarUsername');
+    if (usernameEl) usernameEl.textContent = username;
+  }
+  if (role) {
+    const roleEl = document.getElementById('sidebarRole');
+    if (roleEl) roleEl.textContent = role;
+  }
+});
+
+// Logout function
+function logout() {
+  if (confirm('Are you sure you want to logout?')) {
+    localStorage.clear();
+    window.location.href = '/pages/auth.html';
+  }
+}
+</script>
 </body>
 </html>

@@ -24,6 +24,11 @@ body {
   padding: 10px 10px;
 }
 
+.sidebar img{
+  max-width: 200px;
+  padding: 10px 10px;
+}
+
 .sidebar ul {
   list-style: none;
   padding: 0;
